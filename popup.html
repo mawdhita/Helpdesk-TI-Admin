@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script defer src="popup.js"></script>
+    <title>Hapus</title>
+</head>
+<body>
+    <section>
+     <button class="hapus">Hapus</button>  
+      <span class="overlay"></span>
+
+      <div class="modal-box">
+        
+        <h2>Completed</h2>
+        <p>Data Berhasil Dihapus</p>
+<button type="button">OK</button>
+       
+          
+        </div>
+        
+      </div>
+    </section>
+    <script>
+      const section = document.querySelector("section"),
+       overlay = document.querySelector("overlay"),
+      showBtn = document.querySelector("hapus"),
+      closeBtn = document.querySelector("close");
+
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+
+      overlay.addEventListener("click", () => 
+      section.classList.remove("active"));
+
+      closeBtn.addEventListener("click", () => 
+      section.classList.remove("active"));
+      
+    </script>
+    
+</body>
+</html>
